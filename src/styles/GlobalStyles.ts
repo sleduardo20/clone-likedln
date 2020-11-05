@@ -1,6 +1,17 @@
-import { createGlobalStyle } from 'styled-components';
+import {
+  createGlobalStyle,
+  DefaultTheme,
+  GlobalStyleComponent,
+} from 'styled-components';
 
-export default createGlobalStyle`
+type GlobalStylesProps = {
+  removeBg: boolean;
+};
+
+const globalStyles: GlobalStyleComponent<
+  GlobalStylesProps,
+  DefaultTheme
+> = createGlobalStyle`
   *{
     margin:0;
     padding:0;
@@ -18,6 +29,7 @@ export default createGlobalStyle`
 
   body{
     font-family: ${({ theme }) => theme.font.family};
+    background: ${({ theme }) => theme.colors.bg}
   }
 
 
@@ -57,3 +69,5 @@ export default createGlobalStyle`
        url('../fonts/poppins-v13-latin-800.woff') format('woff'); 
 }
 `;
+
+export default globalStyles;

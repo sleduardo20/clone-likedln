@@ -9,10 +9,11 @@
     "lint": "eslint src --fix --max-warnings=0",
     "test": "jest",
     "test:watch": "jest --watch",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public"
+    "storybook": "start-storybook -p 6006 --no-dll",
+    "build-storybook": "build-storybook --no-dll"
   },
   "dependencies": {
+    "@storybook/react": "^6.0.28",
     "build": "^0.1.4",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.3.1",
@@ -36,8 +37,9 @@
   "devDependencies": {
     "@babel/core": "^7.12.1",
     "@babel/preset-typescript": "^7.10.4",
-    "@storybook/addon-essentials": "^6.0.26",
-    "@storybook/react": "^6.0.28",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
     "@types/jest": "^26.0.14",
@@ -62,7 +64,7 @@
     "lint-staged": "^10.5.1",
     "prettier": "^2.0.5",
     "pretty-format": "^26.6.0",
-    "react-is": "^16.13.1",
+    "react-is": "^17.0.1",
     "ts-loader": "^8.0.4",
     "typescript": "^4.0.3"
   }
