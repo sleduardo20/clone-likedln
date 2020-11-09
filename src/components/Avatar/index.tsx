@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Container } from './styles';
 
 export interface AvatarProps {

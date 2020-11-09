@@ -21,7 +21,7 @@ export default {
     large: '2.4rem',
     xlarge: '3.2rem',
     xxlarge: '4.0rem',
-    xxxlarge: '4 .8rem',
+    xxxlarge: '4.8rem',
     huge: '5.4rem',
   },
   border: {
