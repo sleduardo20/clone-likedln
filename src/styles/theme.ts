@@ -17,6 +17,7 @@ export default {
   spacings: {
     xsmal: '0.4rem',
     small: '0.8rem',
+    normal: '1.2rem',
     medium: '1.6rem',
     large: '2.4rem',
     xlarge: '3.2rem',
@@ -34,11 +35,10 @@ export default {
     blue: '#0275B1',
     black: '#181818',
     white: '#FFFFFF',
-    bg: '#E5E5E5',
+    bg: '#F7F9FB',
     green: '#02B033',
     gray: '#CECECE',
     black20: '#747474',
-    bgfooter: '#F7F9FB',
     orange: 'linear-gradient(215.49deg, #FFB75E 5.4%, #ED8F03 93.45%)',
   },
 } as const;

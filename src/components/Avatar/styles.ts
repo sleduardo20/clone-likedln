@@ -22,6 +22,7 @@ const containerModifiers = {
 
 export const Container = styled.div<ContainerProps>`
   ${({ size }) => css`
+    flex-shrink: 0;
     ${!!size && containerModifiers[size]};
     border-radius: 50%;
     img {

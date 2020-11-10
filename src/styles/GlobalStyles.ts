@@ -29,7 +29,8 @@ const globalStyles: GlobalStyleComponent<
 
   body{
     font-family: ${({ theme }) => theme.font.family};
-    background: ${({ theme }) => theme.colors.bg}
+    background: ${({ theme, removeBg }) =>
+      removeBg ? 'none' : theme.colors.bg}
   }
 
 

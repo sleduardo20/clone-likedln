@@ -27,6 +27,7 @@ exports[`<Input/> should be able render Input compoment correctly 1`] = `
   outline: none;
   padding: 0.8rem;
   font-size: 1.6rem;
+  line-height: 1.8rem;
   color: #181818;
   border: none;
   width: 100%;

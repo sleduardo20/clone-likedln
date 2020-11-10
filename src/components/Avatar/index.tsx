@@ -1,7 +1,7 @@
 import { Container } from './styles';
 
 export interface AvatarProps {
-  size: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large';
 }
 
 const Avatar = ({ size = 'large' }: AvatarProps) => {

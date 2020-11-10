@@ -29,6 +29,7 @@ export const Container = styled.div<ContainerProps>`
       outline: none;
       padding: ${theme.spacings.small};
       font-size: ${theme.font.size.normal};
+      line-height: ${theme.font.size.medium};
       color: ${theme.colors.black};
       border: none;
       width: 100%;

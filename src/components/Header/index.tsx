@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import {
   FiRss as IconFeed,
   FiUsers as IconNetwork,
@@ -24,37 +26,63 @@ import {
 } from './styles';
 
 const Header = () => {
+  const router = useRouter();
+
   return (
     <Container>
       <Logo />
       <NavPages>
-        <Option>
-          <IconFeed />
-          <strong>Feed</strong>
+        <Option className="active">
+          <Link href="/feed" passHref prefetch={false}>
+            <a>
+              <IconFeed />
+              <strong>Feed</strong>
+            </a>
+          </Link>
         </Option>
-        <Option>
-          <IconNetwork />
-          <strong>Network</strong>
+
+        <Option className="">
+          <Link href="/network" passHref prefetch={false}>
+            <a>
+              <IconNetwork />
+              <strong>Network</strong>
+            </a>
+          </Link>
         </Option>
-        <Option>
-          <IconJobs />
-          <strong>Jobs</strong>
+
+        <Option className="">
+          <Link href="/jobs" passHref prefetch={false}>
+            <a>
+              <IconJobs />
+              <strong>Jobs</strong>
+            </a>
+          </Link>
         </Option>
-        <Option>
-          <IconChat />
-          <strong>Chat</strong>
+
+        <Option className="">
+          <Link href="/chat" passHref prefetch={false}>
+            <a>
+              <IconChat />
+              <strong>Chat</strong>
+            </a>
+          </Link>
         </Option>
-        <Option>
-          <IconNotices />
-          <strong>Notices</strong>
+
+        <Option className="">
+          <Link href="/notices" passHref prefetch={false}>
+            <a>
+              <IconNotices />
+              <strong>Notices</strong>
+            </a>
+          </Link>
         </Option>
       </NavPages>
       <Search>
-        <Input icon={<FiSearch />} />
+        <Input name="search" placeholder="Search" icon={<FiSearch />} />
       </Search>
 
       <Profile>
-        <Avatar />
+        <Avatar size="small" />
         <Info>
           <strong>Eduardo Sousa Lima</strong>
           <span>
