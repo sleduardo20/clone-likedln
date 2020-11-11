@@ -82,7 +82,10 @@ const Header = () => {
       </Search>
 
       <Profile>
-        <Avatar size="small" />
+        <Avatar
+          src="https://avatars3.githubusercontent.com/u/56615577?s=460&u=9bd6fb040ce1183ec389d2d95eeb216074713314&v=4"
+          size="small"
+        />
         <Info>
           <strong>Eduardo Sousa Lima</strong>
           <span>

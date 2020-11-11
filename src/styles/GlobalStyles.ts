@@ -12,6 +12,46 @@ const globalStyles: GlobalStyleComponent<
   GlobalStylesProps,
   DefaultTheme
 > = createGlobalStyle`
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: local('Poppins Light'), local('Poppins-Light'),
+          url('/fonts/poppins-v15-latin-300.woff2') format('woff2'), 
+          
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: local('Poppins Regular'), local('Poppins-Regular'),
+          url('/fonts/poppins-v15-latin-regular.woff2') format('woff2'), 
+          
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: local('Poppins Bold'), local('Poppins-Bold'),
+          url('/fonts/poppins-v15-latin-700.woff2') format('woff2'), 
+          
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: local('Poppins ExtraBold'), local('Poppins-ExtraBold'),
+          url('/fonts/poppins-v15-latin-800.woff2') format('woff2'), 
+          
+    }
+
   *{
     margin:0;
     padding:0;
@@ -34,41 +74,7 @@ const globalStyles: GlobalStyleComponent<
   }
 
 
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Poppins Light'), local('Poppins-Light'),
-       url('../fonts/poppins-v13-latin-300.woff2') format('woff2'), 
-       url('../fonts/poppins-v13-latin-300.woff') format('woff'); 
-}
-
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Poppins Regular'), local('Poppins-Regular'),
-       url('../fonts/poppins-v13-latin-regular.woff2') format('woff2'), 
-       url('../fonts/poppins-v13-latin-regular.woff') format('woff'); 
-}
-
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Poppins Bold'), local('Poppins-Bold'),
-       url('../fonts/poppins-v13-latin-700.woff2') format('woff2'), 
-       url('../fonts/poppins-v13-latin-700.woff') format('woff'); 
-}
-
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 800;
-  src: local('Poppins ExtraBold'), local('Poppins-ExtraBold'),
-       url('../fonts/poppins-v13-latin-800.woff2') format('woff2'), 
-       url('../fonts/poppins-v13-latin-800.woff') format('woff'); 
-}
+  
 `;
 
 export default globalStyles;
