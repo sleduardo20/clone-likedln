@@ -41,3 +41,13 @@ small.args = {
   icon: <FiMoreVertical />,
   size: 'small',
 };
+
+export const iconLeft: Story<ButtonProps> = args => (
+  <Button positionIconLeft {...args} />
+);
+iconLeft.args = {
+  icon: <FiMoreVertical />,
+  children: 'Questions ?',
+  size: 'large',
+  color: 'blue',
+};

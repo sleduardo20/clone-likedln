@@ -13,6 +13,7 @@ export type ButtonProps = {
   label?: string;
   color: 'white' | 'blue';
   border?: boolean;
+  positionIconLeft?: boolean;
   icon?: React.ReactNode;
   as?: React.ElementType;
 } & ButtonTypes;
@@ -23,10 +24,17 @@ const Button: React.ForwardRefRenderFunction<ContainerProps, ButtonProps> = ({
   color,
   border,
   children,
+  positionIconLeft,
   ...rest
 }: ButtonProps) => {
   return (
-    <Container size={size} color={color} border={border} {...rest}>
+    <Container
+      size={size}
+      color={color}
+      border={border}
+      positionIconLeft={positionIconLeft}
+      {...rest}
+    >
       {icon}
       {!!children && <small>{children}</small>}
     </Container>

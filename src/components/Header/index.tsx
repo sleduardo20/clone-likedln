@@ -12,6 +12,7 @@ import {
 } from 'react-icons/fi';
 
 import Logo from '../Logo';
+import { NavLink } from '../OptionMenu';
 import Avatar from '../Avatar';
 import Input from '../Input';
 
@@ -33,7 +34,7 @@ const Header = () => {
       <Logo />
       <NavPages>
         <Option className="active">
-          <Link href="/feed" passHref prefetch={false}>
+          <Link href="/feed">
             <a>
               <IconFeed />
               <strong>Feed</strong>

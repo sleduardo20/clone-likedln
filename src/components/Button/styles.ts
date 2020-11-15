@@ -1,7 +1,10 @@
 import styled, { css, DefaultTheme } from 'styled-components';
 import { ButtonProps } from '.';
 
-export type ContainerProps = Pick<ButtonProps, 'size' | 'color' | 'border'>;
+export type ContainerProps = Pick<
+  ButtonProps,
+  'size' | 'color' | 'border' | 'positionIconLeft'
+>;
 
 const containerModifiers = {
   small: (theme: DefaultTheme) => css`
@@ -48,6 +51,10 @@ const containerModifiers = {
   blue: (theme: DefaultTheme) => css`
     background: ${theme.colors.blue};
 
+    > svg {
+      color: ${theme.colors.white};
+    }
+
     > small {
       color: ${theme.colors.white};
     }
@@ -55,7 +62,7 @@ const containerModifiers = {
 };
 
 export const Container = styled.button<ContainerProps>`
-  ${({ theme, color, size, border }) => css`
+  ${({ theme, color, size, border, positionIconLeft }) => css`
     border: none;
     padding: ${theme.spacings.small};
     outline: none;
@@ -64,6 +71,7 @@ export const Container = styled.button<ContainerProps>`
     transition: 0.1s;
 
     display: flex;
+    flex-direction: ${positionIconLeft ? 'row-reverse' : ''};
     align-items: center;
     justify-content: center;
 
@@ -85,6 +93,7 @@ export const Container = styled.button<ContainerProps>`
       height: 1.6rem;
       width: 1.6rem;
       margin-right: ${theme.spacings.small};
+      margin-left: ${positionIconLeft ? '0.8rem' : ''};
     }
     ${border && containerModifiers.hasBorder(theme)}
     ${!!size && containerModifiers[size](theme)}
