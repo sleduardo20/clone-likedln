@@ -13,7 +13,7 @@
     "build-storybook": "build-storybook --no-dll"
   },
   "dependencies": {
-    "@storybook/react": "^6.0.28",
+    "@storybook/react": "^6.1.10",
     "@styled-icons/material-rounded": "^10.18.0",
     "build": "^0.1.4",
     "eslint-plugin-import": "^2.22.1",
@@ -40,9 +40,9 @@
   "devDependencies": {
     "@babel/core": "^7.12.1",
     "@babel/preset-typescript": "^7.10.4",
-    "@storybook/addon-actions": "^6.0.28",
-    "@storybook/addon-essentials": "^6.0.28",
-    "@storybook/addon-links": "^6.0.28",
+    "@storybook/addon-actions": "^6.1.10",
+    "@storybook/addon-essentials": "^6.1.10",
+    "@storybook/addon-links": "^6.1.10",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
     "@types/jest": "^26.0.14",

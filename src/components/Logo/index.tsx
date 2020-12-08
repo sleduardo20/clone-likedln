@@ -3,7 +3,7 @@ export type LogoProps = {
   color?: 'normal' | 'premium';
 };
 
-const Logo = ({ hasName = false, color = 'normal' }: LogoProps) => {
+const Logo = ({ hasName, color = 'normal' }: LogoProps) => {
   return (
     <svg
       width="46"

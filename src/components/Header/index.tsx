@@ -12,7 +12,6 @@ import {
 } from 'react-icons/fi';
 
 import Logo from '../Logo';
-import { NavLink } from '../OptionMenu';
 import Avatar from '../Avatar';
 import Input from '../Input';
 
@@ -33,8 +32,8 @@ const Header = () => {
     <Container>
       <Logo />
       <NavPages>
-        <Option className="active">
-          <Link href="/feed">
+        <Option className={router.pathname === '/' ? 'active' : ''}>
+          <Link href="/">
             <a>
               <IconFeed />
               <strong>Feed</strong>
@@ -42,8 +41,8 @@ const Header = () => {
           </Link>
         </Option>
 
-        <Option className="">
-          <Link href="/network" passHref prefetch={false}>
+        <Option className={router.pathname === '/network' ? 'active' : ''}>
+          <Link href="network" passHref prefetch={false}>
             <a>
               <IconNetwork />
               <strong>Network</strong>
@@ -51,7 +50,7 @@ const Header = () => {
           </Link>
         </Option>
 
-        <Option className="">
+        <Option className={router.pathname === '/jobs' ? 'active' : ''}>
           <Link href="/jobs" passHref prefetch={false}>
             <a>
               <IconJobs />
@@ -60,7 +59,7 @@ const Header = () => {
           </Link>
         </Option>
 
-        <Option className="">
+        <Option className={router.pathname === '/chat' ? 'active' : ''}>
           <Link href="/chat" passHref prefetch={false}>
             <a>
               <IconChat />
@@ -69,7 +68,7 @@ const Header = () => {
           </Link>
         </Option>
 
-        <Option className="">
+        <Option className={router.pathname === '/notices' ? 'active' : ''}>
           <Link href="/notices" passHref prefetch={false}>
             <a>
               <IconNotices />

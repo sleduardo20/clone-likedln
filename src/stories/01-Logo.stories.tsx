@@ -5,6 +5,9 @@ import Logo, { LogoProps } from '../components/Logo';
 export default {
   title: 'components/Logo',
   component: Logo,
+  args: {
+    hasName: true,
+  },
 } as Meta;
 
-export const basic: Story<LogoProps> = args => <Logo {...args} />;
+export const Basic: Story<LogoProps> = args => <Logo {...args} />;
