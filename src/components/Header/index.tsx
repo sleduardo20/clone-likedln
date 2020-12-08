@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import {
   FiRss as IconFeed,
   FiUsers as IconNetwork,
@@ -11,14 +9,15 @@ import {
   FiArrowUpRight,
 } from 'react-icons/fi';
 
+import { NavLink } from '../OptionMenu';
 import Logo from '../Logo';
 import Avatar from '../Avatar';
 import Input from '../Input';
 
 import {
   Container,
+  Content,
   NavPages,
-  Option,
   Search,
   Profile,
   Info,
@@ -26,80 +25,41 @@ import {
 } from './styles';
 
 const Header = () => {
-  const router = useRouter();
-
   return (
     <Container>
-      <Logo />
-      <NavPages>
-        <Option className={router.pathname === '/' ? 'active' : ''}>
-          <Link href="/">
-            <a>
-              <IconFeed />
-              <strong>Feed</strong>
-            </a>
-          </Link>
-        </Option>
+      <Content>
+        <Logo />
+        <NavPages>
+          <NavLink href="/" linkName="Feed" icon={<IconFeed />} />
+          <NavLink href="/network" linkName="Network" icon={<IconNetwork />} />
+          <NavLink href="/jobs" linkName="Jobs" icon={<IconJobs />} />
+          <NavLink href="/chat" linkName="Chat" icon={<IconChat />} />
+          <NavLink href="/notices" linkName="Notices" icon={<IconNotices />} />
+        </NavPages>
+        <Search>
+          <Input name="search" placeholder="Search" icon={<FiSearch />} />
+        </Search>
 
-        <Option className={router.pathname === '/network' ? 'active' : ''}>
-          <Link href="network" passHref prefetch={false}>
-            <a>
-              <IconNetwork />
-              <strong>Network</strong>
-            </a>
-          </Link>
-        </Option>
-
-        <Option className={router.pathname === '/jobs' ? 'active' : ''}>
-          <Link href="/jobs" passHref prefetch={false}>
-            <a>
-              <IconJobs />
-              <strong>Jobs</strong>
-            </a>
-          </Link>
-        </Option>
-
-        <Option className={router.pathname === '/chat' ? 'active' : ''}>
-          <Link href="/chat" passHref prefetch={false}>
-            <a>
-              <IconChat />
-              <strong>Chat</strong>
-            </a>
-          </Link>
-        </Option>
-
-        <Option className={router.pathname === '/notices' ? 'active' : ''}>
-          <Link href="/notices" passHref prefetch={false}>
-            <a>
-              <IconNotices />
-              <strong>Notices</strong>
-            </a>
-          </Link>
-        </Option>
-      </NavPages>
-      <Search>
-        <Input name="search" placeholder="Search" icon={<FiSearch />} />
-      </Search>
-
-      <Profile>
-        <Avatar
-          src="https://avatars3.githubusercontent.com/u/56615577?s=460&u=9bd6fb040ce1183ec389d2d95eeb216074713314&v=4"
-          size="small"
-        />
-        <Info>
-          <strong>Eduardo Sousa Lima</strong>
-          <span>
-            367 views today
-            <p>
-              + 32 <FiArrowUpRight />
-            </p>
-          </span>
-        </Info>
-      </Profile>
-      <Outher>
-        <IconMenuVertical />
-        <strong>Outher</strong>
-      </Outher>
+        <Profile>
+          <Avatar
+            src="https://avatars3.githubusercontent.com/u/56615577?s=460&u=9bd6fb040ce1183ec389d2d95eeb216074713314&v=4"
+            size="small"
+          />
+          <Info>
+            <strong>Eduardo Sousa Lima</strong>
+            <span>
+              367 views today
+              <p>
+                + 32 <FiArrowUpRight />
+              </p>
+            </span>
+          </Info>
+        </Profile>
+        <Outher>
+          <IconMenuVertical />
+          <strong>Outher</strong>
+        </Outher>
+      </Content>
     </Container>
   );
 };

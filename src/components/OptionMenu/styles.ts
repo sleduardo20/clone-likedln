@@ -4,9 +4,14 @@ import theme from '../../styles/theme';
 export const Option = styled.a`
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: center;
   justify-content: center;
   color: ${theme.colors.black};
+  font-size: ${theme.font.size.small};
+  line-height: ${theme.spacings.large};
+  padding: ${theme.spacings.medium} ${theme.spacings.large}
+    ${theme.spacings.small} ${theme.spacings.large};
 
   strong {
     margin-top: ${theme.spacings.small};
@@ -14,20 +19,21 @@ export const Option = styled.a`
   }
 
   &:hover {
-    color: ${theme.colors.orange};
+    color: ${theme.colors.blue};
+    cursor: pointer;
   }
 
   &.active {
-    > a {
-      color: ${theme.colors.blue};
-    }
+    color: ${theme.colors.blue};
+
     &::after {
       content: '';
-      width: 100%;
+      width: 8rem;
       height: 0.1rem;
       background: ${theme.colors.blue};
       position: absolute;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       bottom: 0;
     }
   }

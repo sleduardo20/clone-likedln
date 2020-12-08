@@ -2,6 +2,14 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
+    background: ${theme.colors.white};
+  `}
+`;
+
+export const Content = styled.div`
+  ${({ theme }) => css`
+    width: min(100%, 136rem);
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,7 +26,7 @@ export const NavPages = styled.nav`
   ${({ theme }) => css`
     width: 48.2rem;
     height: 100%;
-    padding: 0 ${theme.spacings.small};
+    padding: 0 ${theme.spacings.large};
     border-left: 0.1rem solid ${theme.colors.bg};
     border-right: 0.1rem solid ${theme.colors.bg};
     outline: none;
@@ -30,50 +38,6 @@ export const NavPages = styled.nav`
     svg {
       width: 2.4rem;
       height: 2.4rem;
-    }
-  `}
-`;
-
-export const Option = styled.div`
-  ${({ theme }) => css`
-    position: relative;
-    width: 9rem;
-    cursor: pointer;
-
-    font-size: ${theme.font.size.small};
-    line-height: ${theme.spacings.large};
-    padding: ${theme.spacings.medium} 0 ${theme.spacings.small};
-
-    &.active {
-      > a {
-        color: ${theme.colors.blue};
-      }
-      &::after {
-        content: '';
-        width: 100%;
-        height: 0.1rem;
-        background: ${theme.colors.blue};
-        position: absolute;
-        left: 0;
-        bottom: 0;
-      }
-    }
-
-    > a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: ${theme.colors.black};
-
-      strong {
-        margin-top: ${theme.spacings.small};
-        font-weight: ${theme.font.bold};
-      }
-
-      &:hover {
-        color: ${theme.colors.blue};
-      }
     }
   `}
 `;

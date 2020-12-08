@@ -2,26 +2,27 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Option } from './styles';
 
-const defaultProps = {
-  activeClassName: 'active',
-};
-
-type Props = {
+interface NavLinkProps {
   href: string;
   linkName: string;
+  icon?: React.ReactNode;
   activeClassName?: string;
-} & typeof defaultProps;
+}
 
-export const NavLink = ({ href, linkName, activeClassName }: Props) => {
+export const NavLink = ({
+  href,
+  linkName,
+  activeClassName = 'active',
+  icon,
+}: NavLinkProps) => {
   const router = useRouter();
 
   return (
-    <Link href={href}>
+    <Link href={href} passHref prefetch={false}>
       <Option className={router.pathname === href ? activeClassName : ''}>
-        {linkName}
+        {icon}
+        <strong>{linkName}</strong>
       </Option>
     </Link>
   );
 };
-
-NavLink.defaultProps = defaultProps;
