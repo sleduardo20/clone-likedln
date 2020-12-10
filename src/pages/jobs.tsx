@@ -1,11 +1,10 @@
-import Header from 'components/Header';
+import Base from '../templates/Base';
 
 const Jobs = () => {
   return (
-    <>
-      <Header />
-      Jobs
-    </>
+    <Base>
+      <h1>Jobs</h1>
+    </Base>
   );
 };
 

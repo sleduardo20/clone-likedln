@@ -1,11 +1,10 @@
-import Header from 'components/Header';
+import Base from '../templates/Base';
 
 const Notices = () => {
   return (
-    <>
-      <Header />
-      Notices
-    </>
+    <Base>
+      <h1>Notices</h1>
+    </Base>
   );
 };
 

@@ -1,7 +1,11 @@
-import Header from 'components/Header';
+import Base from '../templates/Base';
 
 const Home = () => {
-  return <Header />;
+  return (
+    <Base>
+      <h1>Feed</h1>
+    </Base>
+  );
 };
 
 export default Home;

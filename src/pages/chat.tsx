@@ -1,11 +1,10 @@
-import Header from 'components/Header';
+import Base from '../templates/Base';
 
 const Chat = () => {
   return (
-    <>
-      <Header />
-      Chat
-    </>
+    <Base>
+      <h1>Chat</h1>
+    </Base>
   );
 };
 

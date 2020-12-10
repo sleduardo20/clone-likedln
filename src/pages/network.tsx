@@ -1,11 +1,10 @@
-import Header from 'components/Header';
+import Base from '../templates/Base';
 
 const Network = () => {
   return (
-    <>
-      <Header />
-      Network
-    </>
+    <Base>
+      <h1>Network</h1>
+    </Base>
   );
 };
 

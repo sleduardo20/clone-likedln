@@ -16,7 +16,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: min(100%, 136rem);
+  width: min(100%, 111rem);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
