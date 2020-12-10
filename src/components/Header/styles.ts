@@ -61,8 +61,13 @@ export const Info = styled.div`
   ${({ theme }) => css`
     display: flex;
     font-size: ${theme.font.size.small};
+
     flex-direction: column;
     margin-left: ${theme.spacings.normal};
+
+    a {
+      color: ${theme.colors.black};
+    }
 
     > strong:hover {
       text-decoration: underline;

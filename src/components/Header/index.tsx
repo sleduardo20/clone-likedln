@@ -9,6 +9,7 @@ import {
   FiArrowUpRight,
 } from 'react-icons/fi';
 
+import Link from 'next/link';
 import { NavLink } from '../OptionMenu';
 import Logo from '../Logo';
 import Avatar from '../Avatar';
@@ -46,7 +47,11 @@ const Header = () => {
             size="small"
           />
           <Info>
-            <strong>Eduardo Sousa Lima</strong>
+            <strong>
+              <Link href="/profile">
+                <a>Eduardo Sousa Lima</a>
+              </Link>
+            </strong>
             <span>
               367 views today
               <p>
