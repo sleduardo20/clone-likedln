@@ -10,7 +10,7 @@ export const Container = styled.div`
     h3 {
       font-size: ${theme.font.size.normal};
       font-weight: ${theme.font.bold};
-      margin-bottom: ${theme.spacings.small};
+      margin-bottom: ${theme.spacings.large};
     }
   `}
 `;
@@ -51,6 +51,7 @@ export const Navigation = styled.div`
 `;
 
 export const FastAcecces = styled.div`
+  margin-right: ${({ theme }) => theme.spacings.xxlarge};
   button {
     margin-bottom: ${({ theme }) => theme.spacings.normal};
   }

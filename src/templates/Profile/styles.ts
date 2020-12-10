@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import * as AvatarStyles from '../../components/Avatar/styles';
+
 export const ContentLeft = styled.div`
   ${({ theme }) => css`
     border-radius: ${theme.border.radius4};
@@ -8,8 +10,17 @@ export const ContentLeft = styled.div`
 `;
 
 export const ProfileInfo = styled.div`
-  width: 100%;
-  position: relative;
+  ${({ theme }) => css`
+    width: 100%;
+    height: 36rem;
+    position: relative;
+
+    ${AvatarStyles.Container} {
+      position: absolute;
+      bottom: ${theme.spacings.xxxlarge};
+      left: ${theme.spacings.small};
+    }
+  `}
 `;
 
 export const Image = styled.img`

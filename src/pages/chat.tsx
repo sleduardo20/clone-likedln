@@ -1,9 +1,12 @@
+import { Wrapper } from 'components/Wrapper';
 import Base from '../templates/Base';
 
 const Chat = () => {
   return (
     <Base>
-      <h1>Chat</h1>
+      <Wrapper>
+        <h1>Chat</h1>
+      </Wrapper>
     </Base>
   );
 };

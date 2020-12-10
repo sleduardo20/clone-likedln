@@ -1,9 +1,12 @@
+import { Wrapper } from 'components/Wrapper';
 import Base from '../templates/Base';
 
 const Jobs = () => {
   return (
     <Base>
-      <h1>Jobs</h1>
+      <Wrapper>
+        <h1>Jobs</h1>
+      </Wrapper>
     </Base>
   );
 };
