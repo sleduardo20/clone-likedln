@@ -73,10 +73,11 @@ export const Container = styled.button<ContainerProps>`
     display: flex;
     flex-direction: ${positionIconLeft ? 'row-reverse' : ''};
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     > small {
       font-size: ${theme.font.size.xsmall};
+      flex: 1;
       text-transform: uppercase;
       font-weight: ${theme.font.regular};
     }
