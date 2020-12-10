@@ -28,8 +28,8 @@ const Footer = ({ links }: FooterProps) => {
         <Logo hasName />
 
         <Navigation>
+          <h3>Navigation</h3>
           <ul>
-            <h3>Navigation</h3>
             {links.map(link => (
               <li key={link.title}>
                 <Link href={link.link}>
