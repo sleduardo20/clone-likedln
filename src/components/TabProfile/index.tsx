@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { Container, About, Description } from './styles';
+import { Container, About, Description, Projects, Cards, Card } from './styles';
 
 export interface TabProfileProps {
   seeMore: boolean;
@@ -41,6 +41,36 @@ const TabProfile = () => {
 
         <h4 onClick={handleSeeMore}>See More</h4>
       </About>
+      <Projects>
+        <h2>Projects</h2>
+        <Cards>
+          <Card>
+            <img
+              src="https://static.collectui.com/shots/4414691/foody-web-landing-page-design-large"
+              alt=" Landing Page by Madhu"
+            />
+            <p>Zara redesign concept</p>
+            <span>UX/UI design, 15.07.2020</span>
+          </Card>
+          <Card>
+            <img
+              src="https://static.collectui.com/shots/4028202/credit-card-checkout-medium"
+              alt=" Landing Page by Madhu"
+            />
+            <p>SCTHON event brand identity</p>
+            <span>Graphic design, 03.31.2020</span>
+          </Card>
+          <Card>
+            <img
+              src="https://static.collectui.com/shots/4405774/mvmt-watches-medium"
+              alt=" Landing Page by Madhu"
+            />
+            <p>Drozd. Brand identity. 2020</p>
+            <span>Graphic design, 03.04.2020</span>
+          </Card>
+        </Cards>
+        <h4 onClick={handleSeeMore}>Show all</h4>
+      </Projects>
     </Container>
   );
 };

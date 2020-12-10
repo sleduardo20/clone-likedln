@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    height: 21.5rem;
+    height: 25rem;
     background: ${theme.colors.bg};
     padding: ${theme.spacings.xlarge} 0;
     border-top: 0.1rem solid ${theme.colors.gray};
