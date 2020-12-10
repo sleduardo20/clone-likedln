@@ -54,4 +54,64 @@ export const WrapperButtons = styled.div`
   `}
 `;
 
+export const ContentProfile = styled.div`
+  ${({ theme }) => css`
+    width: 55rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: ${theme.spacings.large} ${theme.spacings.large}
+      ${theme.spacings.xlarge} 20rem;
+
+    > h2 {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      font-size: ${theme.font.size.medium};
+      font-weight: ${theme.font.bold};
+      position: relative;
+
+      img {
+        margin-left: ${theme.spacings.xsmal};
+      }
+    }
+  `}
+`;
+
+export const Location = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+
+    > p {
+      font-size: ${theme.font.size.xsmall};
+      font-weight: ${theme.font.bold};
+      margin-left: ${theme.spacings.xsmal};
+    }
+
+    > svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      color: ${theme.colors.blue};
+      fill: ${theme.colors.blue};
+    }
+  `}
+`;
+
+export const Description = styled.p`
+  ${({ theme }) => css`
+    font-size: ${theme.font.size.small};
+    font-weight: ${theme.font.bold};
+  `}
+`;
+
+export const GroupButtons = styled.div`
+  width: 35.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const ContentRight = styled.div``;

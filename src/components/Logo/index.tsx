@@ -6,9 +6,9 @@ export type LogoProps = {
 const Logo = ({ hasName, color = 'normal' }: LogoProps) => {
   return (
     <svg
-      width={hasName ? '100' : '46'}
-      height={hasName ? '100' : '46'}
-      viewBox={hasName ? '0 0 100 100' : ''}
+      width="60"
+      height="79"
+      viewBox="0 0 62 66"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

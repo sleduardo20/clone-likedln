@@ -1,13 +1,18 @@
-import { FiUpload, FiEdit, FiMoreVertical } from 'react-icons/fi';
+import { FiUpload, FiEdit, FiMoreVertical, FiNavigation } from 'react-icons/fi';
 import Button from 'components/Button';
 
 import { Wrapper } from 'components/Wrapper';
 import Avatar from 'components/Avatar';
+
 import {
   ContentLeft,
   ProfileInfo,
   Image,
   WrapperButtons,
+  ContentProfile,
+  Location,
+  Description,
+  GroupButtons,
   ContentRight,
 } from './styles';
 
@@ -33,6 +38,30 @@ const Profile = () => {
             size="large"
             src="https://avatars3.githubusercontent.com/u/56615577?s=460&u=9bd6fb040ce1183ec389d2d95eeb216074713314&v=4"
           />
+          <ContentProfile>
+            <h2>
+              <p>
+                Eduardo Sousa Lima
+                <img src="/img/logoPremium.svg" alt="logo Premium" />
+              </p>
+              <Location>
+                <FiNavigation />
+                <p> Blumenau, Santa Catarina</p>
+              </Location>
+            </h2>
+
+            <Description>
+              Front End Developer ReactJS, Systems Analyst
+            </Description>
+            <GroupButtons>
+              <Button color="blue" size="large">
+                Contact Info
+              </Button>
+              <Button size="large" border>
+                1,043 Connections
+              </Button>
+            </GroupButtons>
+          </ContentProfile>
         </ProfileInfo>
       </ContentLeft>
 

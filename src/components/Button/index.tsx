@@ -11,7 +11,7 @@ type ButtonTypes =
 export type ButtonProps = {
   size: ButtonSizes;
   label?: string;
-  color: 'white' | 'blue';
+  color?: 'white' | 'blue';
   border?: boolean;
   positionIconLeft?: boolean;
   icon?: React.ReactNode;

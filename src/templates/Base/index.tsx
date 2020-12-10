@@ -8,11 +8,11 @@ interface BaseProps {
 
 const Base = ({ children }: BaseProps) => {
   return (
-    <>
+    <div>
       <Header />
       {children}
       <Footer links={mockFooter} />
-    </>
+    </div>
   );
 };
 
