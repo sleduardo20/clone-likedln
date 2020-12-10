@@ -5,7 +5,6 @@ import * as AvatarStyles from '../../components/Avatar/styles';
 export const ContentLeft = styled.div`
   ${({ theme }) => css`
     border-radius: ${theme.border.radius4};
-    background: ${theme.colors.white};
   `}
 `;
 
@@ -14,6 +13,7 @@ export const ProfileInfo = styled.div`
     width: 100%;
     height: 36rem;
     position: relative;
+    background: ${theme.colors.white};
 
     ${AvatarStyles.Container} {
       position: absolute;
@@ -86,8 +86,8 @@ export const Location = styled.div`
     display: flex;
 
     > p {
-      font-size: ${theme.font.size.xsmall};
-      font-weight: ${theme.font.bold};
+      font-size: ${theme.font.size.small};
+      font-weight: ${theme.font.medium};
       margin-left: ${theme.spacings.xsmal};
     }
 
@@ -112,6 +112,13 @@ export const GroupButtons = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+export const Tabs = styled.div`
+  ${({ theme }) => css`
+    width: 100%;
+    margin-top: ${theme.spacings.large};
+  `}
 `;
 
 export const ContentRight = styled.div``;

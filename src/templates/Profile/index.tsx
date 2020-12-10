@@ -4,6 +4,8 @@ import Button from 'components/Button';
 import { Wrapper } from 'components/Wrapper';
 import Avatar from 'components/Avatar';
 
+import TabContent from 'components/Tabs';
+import TabProfile from 'components/TabProfile';
 import {
   ContentLeft,
   ProfileInfo,
@@ -13,6 +15,7 @@ import {
   Location,
   Description,
   GroupButtons,
+  Tabs,
   ContentRight,
 } from './styles';
 
@@ -63,6 +66,16 @@ const Profile = () => {
             </GroupButtons>
           </ContentProfile>
         </ProfileInfo>
+        <Tabs>
+          <TabContent
+            title01="Profile"
+            title02="Activity & Interests"
+            title03="Articles"
+            content01={<TabProfile />}
+            content02="Activity"
+            content03="Articles"
+          />
+        </Tabs>
       </ContentLeft>
 
       <ContentRight>

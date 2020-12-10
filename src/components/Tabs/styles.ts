@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    width: 85rem;
+    width: 100%;
     margin: 0 auto;
 
     .react-tabs {
@@ -21,8 +21,9 @@ export const Container = styled.div`
       display: inline-block;
       border: 0.1rem solid ${theme.colors.gray};
       color: ${theme.colors.black};
+      background: ${theme.colors.white};
       text-align: center;
-      border-bottom: none;
+      border-bottom: 0.1rem solid ${theme.colors.gray};
       bottom: -1.2rem;
       position: relative;
       list-style: none;
