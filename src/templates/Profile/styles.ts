@@ -121,4 +121,6 @@ export const Tabs = styled.div`
   `}
 `;
 
-export const ContentRight = styled.div``;
+export const ContentRight = styled.div`
+  text-align: right;
+`;
