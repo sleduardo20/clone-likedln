@@ -1,5 +1,16 @@
+import Avatar from 'components/Avatar';
 import { useCallback, useState } from 'react';
-import { Container, About, Description, Projects, Cards, Card } from './styles';
+import {
+  Container,
+  About,
+  Description,
+  Projects,
+  Cards,
+  Card,
+  Skills,
+  CardsSkills,
+  CardSkills,
+} from './styles';
 
 export interface TabProfileProps {
   seeMore: boolean;
@@ -71,6 +82,27 @@ const TabProfile = () => {
         </Cards>
         <h4 onClick={handleSeeMore}>Show all</h4>
       </Projects>
+      <Skills>
+        <h2>Skills & Endoresments</h2>
+        <CardsSkills>
+          <CardSkills>
+            <strong>
+              Front End <span>6</span>
+            </strong>
+          </CardSkills>
+          <CardSkills>
+            <strong>
+              ReactJS <span>7</span>
+            </strong>
+          </CardSkills>
+          <CardSkills>
+            <strong>
+              Communication <span>9</span>
+            </strong>
+          </CardSkills>
+        </CardsSkills>
+        <h4 onClick={handleSeeMore}>Show all</h4>
+      </Skills>
     </Container>
   );
 };

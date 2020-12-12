@@ -13,6 +13,7 @@ const Section = styled.section`
 
     h2 {
       font-size: ${theme.font.size.medium};
+      text-transform: uppercase;
       margin-bottom: ${theme.spacings.xsmal};
     }
 
@@ -71,6 +72,37 @@ export const Card = styled.div`
 
     > img {
       width: 100%;
+    }
+  `}
+`;
+
+export const Skills = styled(Section)``;
+
+export const CardsSkills = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const CardSkills = styled.div`
+  ${({ theme }) => css`
+    width: 18rem;
+    height: 3.2rem;
+    border: 0.1rem solid ${theme.colors.gray};
+    border-radius: ${theme.border.radius8};
+
+    strong {
+      width: 100%;
+      padding: ${theme.spacings.small};
+      font-size: ${theme.font.size.small};
+      text-transform: uppercase;
+      font-weight: ${theme.font.medium};
+      display: flex;
+      justify-content: space-between;
+
+      > span {
+        color: ${theme.colors.blue};
+      }
     }
   `}
 `;
