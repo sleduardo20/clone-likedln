@@ -10,6 +10,10 @@ import {
   Skills,
   CardsSkills,
   CardSkills,
+  Experience,
+  ListJob,
+  Job,
+  DescriptionJob,
 } from './styles';
 
 export interface TabProfileProps {
@@ -103,6 +107,51 @@ const TabProfile = () => {
         </CardsSkills>
         <h4 onClick={handleSeeMore}>Show all</h4>
       </Skills>
+      <Experience>
+        <h2>Experience</h2>
+        <ListJob>
+          <Job>
+            <Avatar
+              size="small"
+              src="https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YnVzaW5lc3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+            <DescriptionJob>
+              <strong>Analista de Relatório</strong>
+              <span>
+                Rad Informática Consultoria E Assessoria
+                <strong>2 yrs 11mos</strong>
+              </span>
+
+              <p>
+                Desenvolvimento de relatórios gerenciais e dashboards, em banco
+                de dados microsoft sql server utilizando as ferramentas Report
+                Builder e Power BI.
+              </p>
+            </DescriptionJob>
+          </Job>
+          <Job>
+            <Avatar
+              size="small"
+              src="https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YnVzaW5lc3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            />
+            <DescriptionJob>
+              <strong>Analista de Suporte</strong>
+              <span>
+                Rad Informática Consultoria E Assessoria
+                <strong>6 yrs 1mos</strong>
+              </span>
+
+              <p>
+                Atendimento ao cliente com suporte em sistema ERP presencial e
+                remoto, treinamento de novos usuários, monitoramento de
+                solicitações e dúvidas do sistema, melhoria contínua buscando
+                soluções e informando com setor de desenvolvimento para
+                alterações.
+              </p>
+            </DescriptionJob>
+          </Job>
+        </ListJob>
+      </Experience>
     </Container>
   );
 };

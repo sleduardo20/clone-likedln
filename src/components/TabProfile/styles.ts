@@ -106,3 +106,54 @@ export const CardSkills = styled.div`
     }
   `}
 `;
+
+export const Experience = styled(Section)``;
+export const ListJob = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Job = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: ${theme.spacings.large} 0;
+    border-bottom: 0.1rem solid ${theme.colors.gray};
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  `}
+`;
+
+export const DescriptionJob = styled.div`
+  ${({ theme }) => css`
+    margin-left: ${theme.spacings.small};
+    display: flex;
+    flex-direction: column;
+
+    > strong {
+      font-size: ${theme.font.size.small};
+      line-height: ${theme.spacings.normal};
+      margin-bottom: ${theme.spacings.small};
+    }
+
+    > span {
+      font-size: ${theme.font.size.xsmall};
+      font-weight: ${theme.font.medium};
+      line-height: ${theme.spacings.normal};
+      margin-bottom: ${theme.spacings.normal};
+
+      > strong {
+        color: ${theme.colors.blue};
+        margin-left: ${theme.spacings.normal};
+      }
+    }
+
+    p {
+      font-size: ${theme.font.size.xsmall};
+      line-height: ${theme.spacings.medium};
+    }
+  `}
+`;
