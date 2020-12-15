@@ -108,9 +108,12 @@ export const CardSkills = styled.div`
 `;
 
 export const Experience = styled(Section)``;
+
 export const ListJob = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Job = styled.div`
@@ -118,11 +121,13 @@ export const Job = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: ${theme.spacings.large} 0;
+    padding: ${theme.spacings.small} 0 ${theme.spacings.large} 0;
+    margin-bottom: ${theme.spacings.large};
     border-bottom: 0.1rem solid ${theme.colors.gray};
 
     &:last-child {
       border-bottom: 0;
+      margin: 0;
     }
   `}
 `;
