@@ -18,21 +18,17 @@ export type ButtonProps = {
   as?: React.ElementType;
 } & ButtonTypes;
 
-const Button: React.ForwardRefRenderFunction<ContainerProps, ButtonProps> = ({
-  size,
-  icon,
-  color,
-  border,
-  children,
-  positionIconLeft,
-  ...rest
-}: ButtonProps) => {
+const Button: React.ForwardRefRenderFunction<ContainerProps, ButtonProps> = (
+  { size, icon, color, border, children, positionIconLeft, ...rest },
+  ref,
+) => {
   return (
     <Container
       size={size}
       color={color}
       border={border}
       positionIconLeft={positionIconLeft}
+      ref={ref}
       {...rest}
     >
       {icon}
