@@ -1,6 +1,9 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ 
+  <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;" src="https://raw.githubusercontent.com/sleduardo20/redesing-likedin/main/public/img/readme.png" width="685" height="426">
+  </a>
+  
 </p>
 
 <h1 align="center">Redesing Linkedin</h1>
