@@ -64,7 +64,7 @@ const containerModifiers = {
 export const Container = styled.button<ContainerProps>`
   ${({ theme, color, size, border, positionIconLeft }) => css`
     border: none;
-    padding: ${theme.spacings.small};
+    padding: ${theme.spacings.xsmal};
     outline: none;
     line-height: ${theme.spacings.large};
     cursor: pointer;

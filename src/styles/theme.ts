@@ -3,10 +3,10 @@ export default {
     family:
       "'Poppins',--apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     size: {
-      xsmall: '1.2rem',
-      small: '1.4rem',
-      normal: '1.6rem',
-      medium: '1.8rem',
+      xsmall: '1.4rem',
+      small: '1.6rem',
+      normal: '1.8rem',
+      medium: '2.0rem',
       big: '2.4rem',
       xbig: '5.2rem',
     },

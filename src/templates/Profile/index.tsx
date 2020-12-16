@@ -6,6 +6,8 @@ import { Wrapper } from 'components/Wrapper';
 import Avatar from 'components/Avatar';
 import TabContent from 'components/Tabs';
 import TabProfile from 'components/TabProfile';
+import TabActivity from 'components/TabActivity';
+import TabArticles from 'components/TabArticles';
 
 import {
   ContentLeft,
@@ -76,8 +78,8 @@ const Profile = () => {
             title02="Activity & Interests"
             title03="Articles"
             content01={<TabProfile />}
-            content02="Activity"
-            content03="Articles"
+            content02={<TabActivity />}
+            content03={<TabArticles />}
           />
         </Tabs>
       </ContentLeft>
