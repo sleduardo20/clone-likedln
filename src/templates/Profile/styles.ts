@@ -121,6 +121,84 @@ export const Tabs = styled.div`
   `}
 `;
 
-export const ContentRight = styled.div`
-  text-align: right;
+export const ContentRight = styled.div``;
+
+const ContainerRight = styled.section`
+  ${({ theme }) => css`
+    width: 100%;
+    min-height: 36rem;
+    position: relative;
+    background: ${theme.colors.white};
+    padding: ${theme.spacings.xlarge} ${theme.spacings.large};
+    margin-bottom: ${theme.spacings.large};
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h1 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: ${theme.font.size.small};
+      padding-bottom: ${theme.spacings.small};
+      border-bottom: 0.1rem solid ${theme.colors.gray};
+
+      a {
+        color: ${theme.colors.blue};
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  `}
+`;
+
+export const Dashboard = styled(ContainerRight)`
+  ${({ theme }) => css`
+    strong {
+      font-size: ${theme.font.size.xbig};
+      color: ${theme.colors.blue};
+      padding-top: ${theme.spacings.small};
+    }
+
+    span {
+      font-size: ${theme.font.size.small};
+      line-height: ${theme.font.size.medium};
+      font-weight: ${theme.font.medium};
+    }
+  `}
+`;
+
+export const Visitors = styled(ContainerRight)`
+  ${({ theme }) => css`
+    div {
+      margin-top: ${theme.spacings.normal};
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    > div + div {
+      margin: 0 0 ${theme.spacings.small} 0;
+    }
+  `}
+`;
+
+export const VisitorInfo = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: ${theme.spacings.normal};
+
+    strong {
+      font-size: ${theme.font.size.normal};
+    }
+
+    span {
+      font-size: ${theme.font.size.xsmall};
+    }
+  `}
 `;

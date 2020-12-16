@@ -10,7 +10,6 @@ import {
 } from 'react-icons/fi';
 
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { NavLink } from '../OptionMenu';
 import Logo from '../Logo';
 import Avatar from '../Avatar';
@@ -27,7 +26,6 @@ import {
 } from './styles';
 
 const Header = () => {
-  const router = useRouter();
   return (
     <Container>
       <Content>

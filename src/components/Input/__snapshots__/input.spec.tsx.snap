@@ -35,19 +35,19 @@ exports[`<Input/> should be able render Input compoment correctly 1`] = `
 }
 
 .c0 > input::-webkit-input-placeholder {
-  color: #CECECE;
+  color: #F4F4F4;
 }
 
 .c0 > input::-moz-placeholder {
-  color: #CECECE;
+  color: #F4F4F4;
 }
 
 .c0 > input:-ms-input-placeholder {
-  color: #CECECE;
+  color: #F4F4F4;
 }
 
 .c0 > input::placeholder {
-  color: #CECECE;
+  color: #F4F4F4;
 }
 
 <div

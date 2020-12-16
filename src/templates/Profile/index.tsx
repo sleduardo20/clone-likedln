@@ -1,11 +1,12 @@
 import { FiUpload, FiEdit, FiMoreVertical, FiNavigation } from 'react-icons/fi';
-import Button from 'components/Button';
+import Link from 'next/link';
 
+import Button from 'components/Button';
 import { Wrapper } from 'components/Wrapper';
 import Avatar from 'components/Avatar';
-
 import TabContent from 'components/Tabs';
 import TabProfile from 'components/TabProfile';
+
 import {
   ContentLeft,
   ProfileInfo,
@@ -17,6 +18,9 @@ import {
   GroupButtons,
   Tabs,
   ContentRight,
+  Dashboard,
+  Visitors,
+  VisitorInfo,
 } from './styles';
 
 const Profile = () => {
@@ -79,7 +83,70 @@ const Profile = () => {
       </ContentLeft>
 
       <ContentRight>
-        <h1>Dhashboards</h1>
+        <Dashboard>
+          <h1>
+            your dashboard
+            <Link href="/#">
+              <a>Go to stats</a>
+            </Link>
+          </h1>
+
+          <strong>360</strong>
+          <span>views today</span>
+          <strong>15</strong>
+          <span>post views</span>
+          <strong>9</strong>
+          <span>search apperaances</span>
+        </Dashboard>
+        <Visitors>
+          <h1>
+            visitors
+            <Link href="/#">
+              <a>view all</a>
+            </Link>
+          </h1>
+
+          <div>
+            <Avatar
+              src="https://images.unsplash.com/photo-1591361796603-01599a42e701?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fGF2YXRhciUyMHdvbWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              size="small"
+            />
+            <VisitorInfo>
+              <strong>Darlene Stone</strong>
+              <span>HR-Manager</span>
+            </VisitorInfo>
+          </div>
+          <div>
+            <Avatar
+              src="https://images.unsplash.com/photo-1561997895-2e5d84cc3ac2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjh8fGF2YXRhciUyMHdvbWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              size="small"
+            />
+            <VisitorInfo>
+              <strong>Theresa Steward</strong>
+              <span>IOS Developer</span>
+            </VisitorInfo>
+          </div>
+          <div>
+            <Avatar
+              src="https://images.unsplash.com/photo-1594616838951-c155f8d978a0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fGF2YXRhcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              size="small"
+            />
+            <VisitorInfo>
+              <strong>Brandon Wilson</strong>
+              <span>Senior UX Designer</span>
+            </VisitorInfo>
+          </div>
+          <div>
+            <Avatar
+              src="https://images.unsplash.com/photo-1605951619579-3f5f6c36c646?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fGF2YXRhciUyMHdvbWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              size="small"
+            />
+            <VisitorInfo>
+              <strong>Kyle Fisher</strong>
+              <span>Product Designer</span>
+            </VisitorInfo>
+          </div>
+        </Visitors>
       </ContentRight>
     </Wrapper>
   );

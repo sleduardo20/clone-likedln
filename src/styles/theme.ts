@@ -39,7 +39,7 @@ export default {
     white: '#FFFFFF',
     bg: '#F7F9FB',
     green: '#02B033',
-    gray: '#CECECE',
+    gray: '#F4F4F4',
     black20: '#747474',
     orange: 'linear-gradient(215.49deg, #FFB75E 5.4%, #ED8F03 93.45%)',
   },
