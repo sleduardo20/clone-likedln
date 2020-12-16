@@ -32,7 +32,7 @@ const Section = styled.section`
 
 export const About = styled(Section)``;
 
-export const Description = styled.div<TabProfileProps>`
+export const DescriptionAbout = styled.div<TabProfileProps>`
   ${({ theme, seeMore }) => css`
     height: ${seeMore ? 'auto' : '4.2rem'};
     overflow: hidden;
@@ -109,18 +109,19 @@ export const CardSkills = styled.div`
 
 export const Experience = styled(Section)``;
 
-export const ListJob = styled.div`
+const listInfo = css`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
-export const Job = styled.div`
+const infoItem = css`
   ${({ theme }) => css`
     display: flex;
+    width: 100%;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     padding: ${theme.spacings.small} 0 ${theme.spacings.large} 0;
     margin-bottom: ${theme.spacings.large};
     border-bottom: 0.1rem solid ${theme.colors.gray};
@@ -132,7 +133,7 @@ export const Job = styled.div`
   `}
 `;
 
-export const DescriptionJob = styled.div`
+const descriptionItem = css`
   ${({ theme }) => css`
     margin-left: ${theme.spacings.small};
     display: flex;
@@ -161,4 +162,25 @@ export const DescriptionJob = styled.div`
       line-height: ${theme.spacings.medium};
     }
   `}
+`;
+
+export const List = styled.div`
+  ${listInfo}
+`;
+
+export const Item = styled.div`
+  ${infoItem}
+`;
+
+export const DescriptionItem = styled.div`
+  ${descriptionItem}
+`;
+
+export const Education = styled(Section)`
+  ${DescriptionItem} {
+    span + strong {
+      font-size: ${({ theme }) => theme.font.size.xsmall};
+      font-weight: ${({ theme }) => theme.font.medium};
+    }
+  }
 `;

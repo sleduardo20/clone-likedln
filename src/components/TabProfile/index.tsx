@@ -1,9 +1,10 @@
 import Avatar from 'components/Avatar';
 import { useCallback, useState } from 'react';
+
 import {
   Container,
   About,
-  Description,
+  DescriptionAbout,
   Projects,
   Cards,
   Card,
@@ -11,9 +12,10 @@ import {
   CardsSkills,
   CardSkills,
   Experience,
-  ListJob,
-  Job,
-  DescriptionJob,
+  List,
+  Item,
+  DescriptionItem,
+  Education,
 } from './styles';
 
 export interface TabProfileProps {
@@ -30,7 +32,7 @@ const TabProfile = () => {
     <Container>
       <About>
         <h2>About</h2>
-        <Description seeMore={more}>
+        <DescriptionAbout seeMore={more}>
           <span>
             Formado em Sistemas de Informação pela Universidade UNITPAC
             Araguaína TO;
@@ -52,7 +54,7 @@ const TabProfile = () => {
             Soft skills: pensamento crítico, trabalho em equipe, comunicação,
             empatia.
           </span>
-        </Description>
+        </DescriptionAbout>
 
         <h4 onClick={handleSeeMore}>See More</h4>
       </About>
@@ -109,13 +111,13 @@ const TabProfile = () => {
       </Skills>
       <Experience>
         <h2>Experience</h2>
-        <ListJob>
-          <Job>
+        <List>
+          <Item>
             <Avatar
               size="small"
               src="https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YnVzaW5lc3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             />
-            <DescriptionJob>
+            <DescriptionItem>
               <strong>Analista de Relatório</strong>
               <span>
                 Rad Informática Consultoria E Assessoria
@@ -127,14 +129,14 @@ const TabProfile = () => {
                 de dados microsoft sql server utilizando as ferramentas Report
                 Builder e Power BI.
               </p>
-            </DescriptionJob>
-          </Job>
-          <Job>
+            </DescriptionItem>
+          </Item>
+          <Item>
             <Avatar
               size="small"
               src="https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YnVzaW5lc3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             />
-            <DescriptionJob>
+            <DescriptionItem>
               <strong>Analista de Suporte</strong>
               <span>
                 Rad Informática Consultoria E Assessoria
@@ -148,10 +150,48 @@ const TabProfile = () => {
                 soluções e informando com setor de desenvolvimento para
                 alterações.
               </p>
-            </DescriptionJob>
-          </Job>
-        </ListJob>
+            </DescriptionItem>
+          </Item>
+        </List>
       </Experience>
+      <Education>
+        <h2>Education</h2>
+
+        <List>
+          <Item>
+            <Avatar
+              src="https://www.unitpac.com.br/imagens/noticias/confira-os-editais-de-monitoria-do-itpac-noticia.jpg"
+              size="small"
+            />
+            <DescriptionItem>
+              <strong>
+                Instituto Tocantinense Presidente Antônio Carlos (ITPAC)
+              </strong>
+              <span>Sistemas da Informação</span>
+              <strong>2010 - 2014</strong>
+            </DescriptionItem>
+          </Item>
+          <Item>
+            <Avatar
+              src="https://pbs.twimg.com/profile_images/1291682473592659968/sEorc6oh_400x400.jpg"
+              size="small"
+            />
+            <DescriptionItem>
+              <strong>Rocketseat</strong>
+              <span>Bootcamp GoStack</span>
+              <strong>2020 - 2021</strong>
+              <p>
+                O GoStack é um treinamento intensivo, no formato de Bootcamp. No
+                GoStack o aluno vai a fundo nas tecnologias NodeJS, ReactJS e
+                React Native, e todo o ecossistema ao redor dessas ferramentas,
+                do zero ao deploy. Incluindo testes automatizados, integração
+                contínua, publicação nas stores, e todas as bibliotecas e
+                frameworks importantes.
+              </p>
+            </DescriptionItem>
+          </Item>
+        </List>
+      </Education>
     </Container>
   );
 };
