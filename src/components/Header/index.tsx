@@ -49,7 +49,7 @@ const Header = () => {
           />
           <Info>
             <strong>
-              <Link href="/profile">
+              <Link href="/">
                 <a>Eduardo Sousa Lima</a>
               </Link>
             </strong>
