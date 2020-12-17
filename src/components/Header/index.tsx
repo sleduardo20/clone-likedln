@@ -32,7 +32,7 @@ const Header = () => {
         <Logo />
 
         <NavPages>
-          <NavLink href="/" linkName="Feed" icon={<IconFeed />} />
+          <NavLink href="/feed" linkName="Feed" icon={<IconFeed />} />
           <NavLink href="/network" linkName="Network" icon={<IconNetwork />} />
           <NavLink href="/jobs" linkName="Jobs" icon={<IconJobs />} />
           <NavLink href="/chat" linkName="Chat" icon={<IconChat />} />

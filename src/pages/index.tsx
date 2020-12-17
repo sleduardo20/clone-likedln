@@ -1,27 +1,13 @@
-import { Wrapper } from 'components/Wrapper';
 import Base from '../templates/Base';
 
-const Home = () => {
+import PageProfile from '../templates/Profile';
+
+const Profile = () => {
   return (
     <Base>
-      <Wrapper>
-        <div
-          style={{
-            height: '56rem',
-            width: '100%',
-            margin: '0 auto',
-            background: 'white',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderRadius: '0.8rem',
-          }}
-        >
-          <h1 style={{ fontSize: '5rem' }}>Feeds</h1>
-        </div>
-      </Wrapper>
+      <PageProfile />
     </Base>
   );
 };
 
-export default Home;
+export default Profile;
